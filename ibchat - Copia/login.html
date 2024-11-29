@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Chat Integralista Brasil</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula o CSS -->
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/A%C3%A7%C3%A3o_Integralista_Brasileira_original_version.svg/2048px-A%C3%A7%C3%A3o_Integralista_Brasileira_original_version.svg.png" alt="Símbolo Integralismo Brasil" class="logo">
+        <h1>Chat Integralista Brasil</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Digite seu nome de usuário" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            localStorage.setItem('username', username);
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
